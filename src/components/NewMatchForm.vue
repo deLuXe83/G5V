@@ -175,7 +175,7 @@
                   v-model="newMatchData.min_players_to_ready"
                   single-line
                   :min="1"
-                  :max="5"
+                  :max="7"
                   :thumb-size="24"
                   thumb-label
                   ticks="always"
