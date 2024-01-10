@@ -161,7 +161,7 @@
                   v-model="newMatchData.players_per_team"
                   single-line
                   :min="1"
-                  :max="5"
+                  :max="7"
                   :thumb-size="24"
                   thumb-label
                   ticks="always"
