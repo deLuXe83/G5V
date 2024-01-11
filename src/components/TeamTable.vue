@@ -266,14 +266,23 @@
                 <v-form ref="authForm">
                   <v-row>
                     <v-col cols="12" sm="12" md="12">
-                      <v-combobox
+                      <v-select
                         v-model="newAuth.steam"
-                        multiple
-                        :items="steamIdList"
+                        
+                        //:items="steamIdList"
+                        :items= "[
+          { steam_id: 'Florida', name: 'FL' },
+          { steam_id: 'Georgia', name: 'GA' },
+          { steam_id: 'Nebraska', name: 'NE' },
+          { steam_id: 'California', name: 'CA' },
+          { steam_id: 'New York', name: 'NY' },
+        ]"
+                        item-title="steam_id"
+                        item-value="name"
                         :label="$t('Team.AuthLabel')"
                         :hint="$t('Team.AuthHint')"
                         :rules="[v => !!v || $t('misc.Required')]"
-                      ></v-combobox>
+                      ></v-select>
                     </v-col>
                   </v-row>
                   <v-row>
