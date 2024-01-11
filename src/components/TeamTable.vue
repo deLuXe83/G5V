@@ -268,6 +268,7 @@
                     <v-col cols="12" sm="12" md="12">
                       <v-combobox
                         v-model="newAuth.steam"
+                        multiple
                         :items="steamIdList"
                         :label="$t('Team.AuthLabel')"
                         :hint="$t('Team.AuthHint')"
