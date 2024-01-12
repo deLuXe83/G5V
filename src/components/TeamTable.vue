@@ -269,7 +269,6 @@
                       <v-select
                         v-model="newAuth.steam"
                         
-                        //:items="steamIdList"
                         :items= "[
           { steam_id: 'Florida', name: 'FL' },
           { steam_id: 'Georgia', name: 'GA' },
