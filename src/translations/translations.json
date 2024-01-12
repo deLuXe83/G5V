@@ -113,7 +113,8 @@
       "MapSidesTeam1CT": "Team 1 Starts CT",
       "MapSidesTeam2CT": "Team 2 Starts CT",
       "MapSidesKnife": "Teams Knife For Sides",
-      "Wingman": "Wingman Match?"
+      "Wingman": "Wingman Match?",
+      "SeriesCanClinch": "Series can clinch? (If false, the entire map list will be played, regardless of score)"
     },
     "PlayerStats": {
       "Kills": "Kills",
