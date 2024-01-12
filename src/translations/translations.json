@@ -84,7 +84,7 @@
       "FormTeam2": "Team 2",
       "FormTeam2Title": "Team2 Title text",
       "FormMatchTitle": "Match Title text",
-      "FormSeriesType": "Series Type (clinch_series: false)",
+      "FormSeriesType": "Series Type",
       "FormMapPool": "Map Pool",
       "FormMapExplanation": "If you wish to have more maps, visit your user profile to add/edit/remove maps!",
       "FormCVARS": "CVARs",
