@@ -374,7 +374,6 @@ export default {
     newServer: {},
     selectedSeason: -1,
     newMatchData: {
-      clinch_series: false,
       min_players_to_ready: 5,
       min_spectators_to_ready: 0,
       players_per_team: 5,
@@ -386,7 +385,8 @@ export default {
       spectators: [],
       side_type: "standard",
       map_sides: [],
-      wingman: false
+      wingman: false,
+      clinch_series: false
     },
     selectedTeams: [],
     newDialog: false,
