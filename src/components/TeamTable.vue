@@ -7,7 +7,7 @@
     :loading="isLoading"
     :loading-text="$t('misc.LoadText')"
     ref="TeamTable"
-    :items-per-page="5"
+    :items-per-page="10"
   >
     <template v-slot:item.tag="{ item }">
       <img
