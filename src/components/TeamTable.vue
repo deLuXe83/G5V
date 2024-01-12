@@ -277,7 +277,7 @@
           { steam_id: '76561198013444801', name: 'executor' },
                         ]"
 
-                        item-title="name"
+                        item-text="name"
                         item-value="steam_id"
                         :label="$t('Team.AuthLabel')"
                         :hint="$t('Team.AuthHint')"
