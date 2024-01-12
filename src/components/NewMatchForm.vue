@@ -374,6 +374,7 @@ export default {
     newServer: {},
     selectedSeason: -1,
     newMatchData: {
+      clinch_series: false,
       min_players_to_ready: 5,
       min_spectators_to_ready: 0,
       players_per_team: 5,
