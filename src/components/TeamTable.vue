@@ -272,10 +272,32 @@
                         :items= "[
           { steam_id: '76561198075776570', name: 'balroger' },
           { steam_id: '76561198138376055', name: 'david' },
+          { steam_id: '76561197964761458', name: 'doesche' },
           { steam_id: '76561198023875979', name: 'Dude' },
           { steam_id: '76561198045030468', name: 'eddy' },
           { steam_id: '76561198013444801', name: 'executor' },
-                        ]"
+          { steam_id: '76561197979798757', name: 'freak' },
+          { steam_id: '76561198018584388', name: 'FoxJoschi' },
+          { steam_id: '76561197961650532', name: 'hengst' },
+          { steam_id: '76561197980701482', name: 'kilroy' },
+          { steam_id: '76561198069687775', name: 'komMando' },
+          { steam_id: '76561198358031700', name: 'Kurz_02' },
+          { steam_id: '76561198069799791', name: 'la gente' },
+          { steam_id: '76561197986735483', name: 'Lars' },
+          { steam_id: '76561197996487388', name: 'Lenz' },
+          { steam_id: '76561198136247666', name: 'Lil Kant' },
+          { steam_id: '76561198337962742', name: 'Low' },
+          { steam_id: '76561198847241077', name: 'Lukas' },
+          { steam_id: '76561197968336318', name: 'manni' },
+          { steam_id: '76561198073369697', name: 'marvin' },
+          { steam_id: '76561197994752297', name: 'Pagei' },
+          { steam_id: '76561197963572337', name: 'schmierlapp' },
+          { steam_id: '76561198017624077', name: 'Timbow' },
+          { steam_id: '76561198250441212', name: 'Timmey' },
+          { steam_id: '76561197996680830', name: 'Tom' },
+          { steam_id: '76561199045654437', name: 'Toni' },
+
+                       ]"
 
                         item-text="name"
                         item-value="steam_id"
