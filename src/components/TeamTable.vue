@@ -270,14 +270,15 @@
                         v-model="newAuth.steam"
                         
                         :items= "[
-          { steam_id: 'Florida', name: 'FL' },
-          { steam_id: 'Georgia', name: 'GA' },
-          { steam_id: 'Nebraska', name: 'NE' },
-          { steam_id: 'California', name: 'CA' },
-          { steam_id: 'New York', name: 'NY' },
-        ]"
-                        item-title="steam_id"
-                        item-value="name"
+          { steam_id: '76561198075776570', name: 'balroger' },
+          { steam_id: '76561198138376055', name: 'david' },
+          { steam_id: '76561198023875979', name: 'Dude' },
+          { steam_id: '76561198045030468', name: 'eddy' },
+          { steam_id: '76561198013444801', name: 'executor' },
+                        ]"
+
+                        item-title="name"
+                        item-value="steam_id"
                         :label="$t('Team.AuthLabel')"
                         :hint="$t('Team.AuthHint')"
                         :rules="[v => !!v || $t('misc.Required')]"
