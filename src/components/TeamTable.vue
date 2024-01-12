@@ -291,6 +291,7 @@
           { steam_id: '76561197968336318', name: 'manni' },
           { steam_id: '76561198073369697', name: 'marvin' },
           { steam_id: '76561197994752297', name: 'Pagei' },
+          { steam_id: '76561197960300580', name: 'Schakal' },
           { steam_id: '76561197963572337', name: 'schmierlapp' },
           { steam_id: '76561198017624077', name: 'Timbow' },
           { steam_id: '76561198250441212', name: 'Timmey' },
