@@ -103,7 +103,6 @@
               <v-col cols="12">
                 <strong>{{ $t("CreateMatch.FormSeriesType") }}</strong>
               </v-col>
-              <v-row class="justify-center">
               <v-col cols="2">
                 <v-switch
                   v-model="newMatchData.clinch_series"
@@ -111,7 +110,6 @@
                   ref="clinch_series"
                 />
               </v-col>
-            </v-row>
               <v-radio-group v-model="newMatchData.maps_to_win" row>
                 <v-col lg="3" sm="12">
                   <v-radio :label="$t('CreateMatch.BestOf') + 1" :value="1" />
