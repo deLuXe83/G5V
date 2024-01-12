@@ -103,6 +103,15 @@
               <v-col cols="12">
                 <strong>{{ $t("CreateMatch.FormSeriesType") }}</strong>
               </v-col>
+              <v-row class="justify-center">
+              <v-col cols="2">
+                <v-switch
+                  v-model="newMatchData.clinch_series"
+                  :label="$t('CreateMatch.clinch_series')"
+                  ref="clinch_series"
+                />
+              </v-col>
+            </v-row>
               <v-radio-group v-model="newMatchData.maps_to_win" row>
                 <v-col lg="3" sm="12">
                   <v-radio :label="$t('CreateMatch.BestOf') + 1" :value="1" />
@@ -461,12 +470,17 @@ export default {
             seasonCvars.wingman == null || seasonCvars.wingman == 0
               ? false
               : true;
+          this.newMatchData.clinch_series =
+            seasonCvars.clinch_series == null || seasonCvars.clinch_series == 0
+              ? false
+              : true;
           //Delete all used get prepare custom CVARs.
           delete seasonCvars.min_players_to_ready;
           delete seasonCvars.min_spectators_to_ready;
           delete seasonCvars.players_per_team;
           delete seasonCvars.maps_to_win;
           delete seasonCvars.wingman;
+          delete seasonCvars.clinch_series;
           delete seasonCvars.skip_veto;
           delete seasonCvars.map_pool;
           delete seasonCvars.side_type;
