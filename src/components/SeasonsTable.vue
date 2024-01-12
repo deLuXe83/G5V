@@ -219,6 +219,15 @@
                   <v-col cols="12" class="text-center text-h6">
                     {{ $t("CreateMatch.FormSeriesType") }}
                   </v-col>
+               
+              <v-col cols="2">
+                <v-switch
+                  v-model="newMatchData.clinch_series"
+                  :label="$t('CreateMatch.SeriesCanClinch')"
+                  ref="clinch_series"
+                />
+              </v-col>
+        
                   <v-radio-group
                     v-model="seasonDefaults.maps_to_win"
                     row
@@ -266,7 +275,7 @@
                       v-model="seasonDefaults.players_per_team"
                       single-line
                       :min="1"
-                      :max="5"
+                      :max="7"
                       :thumb-size="24"
                       thumb-label
                       ticks="always"
@@ -280,7 +289,7 @@
                       v-model="seasonDefaults.min_players_to_ready"
                       single-line
                       :min="1"
-                      :max="5"
+                      :max="7"
                       :thumb-size="24"
                       thumb-label
                       ticks="always"
@@ -489,7 +498,8 @@ export default {
         spectators: [],
         side_type: "standard",
         map_sides: [],
-        wingman: false
+        wingman: false,
+        clinch_series: false
       },
       datemenu: false,
       formTitle: this.$t("Seasons.NewFormTitle"),
@@ -538,7 +548,8 @@ export default {
             spectators: [],
             side_type: "standard",
             map_sides: [],
-            wingman: false
+            wingman: false,
+            clinch_series: false
           };
           this.$refs.newSeasonForm.resetValidation();
         });
@@ -697,7 +708,8 @@ export default {
             spectators: [],
             side_type: "standard",
             map_sides: [],
-            wingman: false
+            wingman: false,
+            clinch_series: false
           };
           this.$refs.newSeasonForm.resetValidation();
         });
@@ -724,6 +736,7 @@ export default {
             obj !== "maps_to_win" &&
             obj !== "skip_veto" &&
             obj !== "wingman" &&
+            obj !== "clinch_series" &&
             obj !== "map_pool" &&
             obj !== "spectators" &&
             obj !== "side_type" &&
