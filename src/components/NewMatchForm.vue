@@ -107,7 +107,7 @@
               <v-col cols="2">
                 <v-switch
                   v-model="newMatchData.clinch_series"
-                  :label="$t('CreateMatch.clinch_series')"
+                  :label="$t('CreateMatch.SeriesCanClinch')"
                   ref="clinch_series"
                 />
               </v-col>
@@ -581,6 +581,7 @@ export default {
             veto_first: this.newMatchData.veto_first,
             skip_veto: this.newMatchData.skip_veto,
             wingman: this.newMatchData.wingman,
+            clinch_series: this.newMatchData.clinch_series,
             spectator_auths: this.newMatchData.spectators,
             min_players_to_ready: parseInt(
               this.newMatchData.min_players_to_ready
