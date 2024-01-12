@@ -222,7 +222,7 @@
                
               <v-col cols="2">
                 <v-switch
-                  v-model="newMatchData.clinch_series"
+                  v-model="seasonDefaults.clinch_series"
                   :label="$t('CreateMatch.SeriesCanClinch')"
                   ref="clinch_series"
                 />
