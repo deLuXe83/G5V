@@ -266,7 +266,7 @@
                 <v-form ref="authForm">
                   <v-row>
                     <v-col cols="12" sm="12" md="12">
-                      <v-select
+                      <v-autocomplete
                         v-model="newAuth.steam"
                         
                         :items= "[
@@ -302,12 +302,19 @@
 
                         item-text="name"
                         item-value="steam_id"
-                        :label="$t('Team.AuthLabel')"
+                        :label="$t('Team.PlayerLabel')"
                         :hint="$t('Team.AuthHint')"
                         :rules="[v => !!v || $t('misc.Required')]"
-                      ></v-select>
+                      ></v-autocomplete>
                     </v-col>
                   </v-row>
+                  <v-col cols="12" sm="12" md="12">
+                      <v-combobox
+                        v-model="newAuth.steam"
+                        :items="steamIdList"
+                        :label="$t('Team.AuthLabel')"
+                      ></v-combobox>
+                    </v-col>
                   <v-row>
                     <v-col cols="12" sm="12" md="12">
                       <v-text-field
@@ -316,6 +323,7 @@
                       ></v-text-field>
                     </v-col>
                   </v-row>
+                    
                   <v-row>
                     <v-col cols="6" sm="6" md="6">
                       <v-switch
