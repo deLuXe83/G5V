@@ -303,18 +303,20 @@
                         item-text="name"
                         item-value="steam_id"
                         :label="$t('Team.PlayerLabel')"
-                        :hint="$t('Team.AuthHint')"
                         :rules="[v => !!v || $t('misc.Required')]"
                       ></v-autocomplete>
                     </v-col>
                   </v-row>
+                   <v-row>
                   <v-col cols="12" sm="12" md="12">
                       <v-combobox
                         v-model="newAuth.steam"
                         :items="steamIdList"
                         :label="$t('Team.AuthLabel')"
+                        :hint="$t('Team.AuthHint')"
                       ></v-combobox>
                     </v-col>
+                    </v-row>
                   <v-row>
                     <v-col cols="12" sm="12" md="12">
                       <v-text-field
