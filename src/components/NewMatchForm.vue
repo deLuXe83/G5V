@@ -143,7 +143,7 @@
               </strong>
             </div>
             <v-row class="justify-center">
-              <v-col lg="1" sm="12" v-for="maps in MapList" :key="maps.map_name">
+              <v-col lg="1" sm="12" v-for="maps in MapList" :key="maps.id">
                 <v-checkbox
                   v-model="newMatchData.map_pool"
                   :value="maps.map_name"
