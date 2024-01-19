@@ -57,7 +57,7 @@
         <v-data-table
           item-key="id"
           class="elevation-1"
-          :items-per-page="12"
+          :items-per-page="14"
           :loading="isLoading"
           :loading-text="$t('misc.LoadText')"
           :headers="headers"
@@ -150,18 +150,25 @@ export default {
           groupable: false
         },
         {
-          text: this.$t("PlayerStats.FlashbangAssists"),
-          value: "flashbang_assists",
+          text: this.$t("PlayerStats.KDR"),
+          value: "kdr",
+          groupable: false
+        },
+                {
+          text: this.$t("PlayerStats.Headshot") + "%",
+          value: "hsp",
+          groupable: false
+        },
+        
+
+        {
+          text: this.$t("PlayerStats.ContribScore"),
+          value: "contribution_score",
           groupable: false
         },
         {
-          text: this.$t("PlayerStats.EnemyFlash"),
-          value: "enemies_flashed",
-          groupable: false
-        },
-        {
-          text: this.$t("PlayerStats.FriendFlash"),
-          value: "friendlies_flashed",
+          text: this.$t("PlayerStats.MVP"),
+          value: "mvp",
           groupable: false
         },
         {
@@ -209,29 +216,27 @@ export default {
           value: "bomb_defuses"
         },
         {
-          text: this.$t("PlayerStats.Headshot") + "%",
-          value: "hsp"
+          text: this.$t("PlayerStats.FlashbangAssists"),
+          value: "flashbang_assists"
         },
         {
-          text: this.$t("PlayerStats.KDR"),
-          value: "kdr"
+          text: this.$t("PlayerStats.EnemyFlash"),
+          value: "enemies_flashed"
         },
+        {
+          text: this.$t("PlayerStats.FriendFlash"),
+          value: "friendlies_flashed"
+        },
+
         {
           text: this.$t("PlayerStats.FPR"),
           value: "fpr"
         },
-        {
+             {
           text: this.$t("PlayerStats.KAST"),
           value: "kast"
-        },
-        {
-          text: this.$t("PlayerStats.ContribScore"),
-          value: "contribution_score"
-        },
-        {
-          text: this.$t("PlayerStats.MVP"),
-          value: "mvp"
-        }
+             }
+   
       ];
     }
   },
