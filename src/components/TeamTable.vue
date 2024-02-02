@@ -555,7 +555,7 @@ export default {
       this.isDisabled = false;
       this.teamInfo = {
         id: -1,
-        name: "New Team",
+        name: "TEAM_",
         flag: "",
         logo: "",
         tag: this.$t("Team.NewTag"),
