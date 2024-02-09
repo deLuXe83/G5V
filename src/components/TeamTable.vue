@@ -279,6 +279,7 @@
           { steam_id: '76561197979798757', name: 'freak' },
           { steam_id: '76561198018584388', name: 'FoxJoschi' },
           { steam_id: '76561197961650532', name: 'hengst' },
+          { steam_id: '76561197986624534', name: 'Juli' },
           { steam_id: '76561197980701482', name: 'kilroy' },
           { steam_id: '76561198069687775', name: 'komMando' },
           { steam_id: '76561198358031700', name: 'Kurz_02' },
