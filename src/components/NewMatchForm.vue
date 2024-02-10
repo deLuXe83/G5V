@@ -61,7 +61,7 @@
             <v-select
               v-model="newMatchData.team1_id"
               :items="teams"
-              item-text="name +' (ID: '+ id +')'"
+              :item-text="item => `${item.name} (ID: ${item.id})`"
               item-value="id"
               :rules="[
                 v => !!v || $t('CreateMatch.TeamRequired'),
@@ -76,7 +76,7 @@
             <v-select
               v-model="newMatchData.team2_id"
               :items="teams"
-              :item-text="item => `${item.name} (ID: ${item.id} )`"
+              :item-text="item => `${item.name} (ID: ${item.id})`"
               item-value="id"
               :rules="[
                 v => !!v || $t('CreateMatch.TeamRequired'),
