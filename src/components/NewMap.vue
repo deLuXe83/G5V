@@ -4,7 +4,7 @@
       <v-row>
         <v-col
           v-for="mapInfo in MapList"
-          :key="mapInfo.id"
+          :key="mapInfo.map_display_name"
           cols="12"
           sm="12"
           md="12"
