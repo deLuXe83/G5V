@@ -12,7 +12,7 @@
         >
           <div class="justify-space-between">
             <v-card dense elevation="3" min-height="">
-              <v-card-title> Titel: {{ mapInfo.map_display_name }} </v-card-title>
+              <v-card-title> {{ mapInfo.map_display_name }} </v-card-title>
               <v-card-subtitle
                 >{{ mapInfo.map_name }}
                 <v-checkbox
