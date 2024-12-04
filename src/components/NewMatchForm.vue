@@ -181,7 +181,7 @@
                 <v-slider
                   v-model="newMatchData.min_players_to_ready"
                   single-line
-                  :min="1"
+                  :min="0"
                   :max="7"
                   :thumb-size="24"
                   thumb-label
@@ -196,6 +196,7 @@
                   v-model="newMatchData.min_spectators_to_ready"
                   single-line
                   :min="0"
+                  :max="10"
                   :thumb-size="24"
                   thumb-label
                   ticks="always"
@@ -381,7 +382,7 @@ export default {
     newServer: {},
     selectedSeason: -1,
     newMatchData: {
-      min_players_to_ready: 5,
+      min_players_to_ready: 0,
       min_spectators_to_ready: 0,
       players_per_team: 5,
       maps_to_win: 1,
@@ -432,7 +433,7 @@ export default {
           let seasonCvars = this.selectedSeasonObject.cvars;
           this.newMatchData.min_players_to_ready =
             seasonCvars.min_players_to_ready == null
-              ? 5
+              ? 0
               : parseInt(seasonCvars.min_players_to_ready);
           this.newMatchData.min_spectators_to_ready =
             seasonCvars.min_spectators_to_ready == null
