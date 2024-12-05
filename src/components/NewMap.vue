@@ -3,7 +3,7 @@
     <v-item-group v-model="Selected" multiple>
       <v-row>
         <v-col
-          v-for="mapInfo in MapList.sort((a, b) => (a.map_display_name > b.map_display_name) ? 1 : -1)"
+          v-for="mapInfo in sortMapList"
           :key="mapInfo.id"
           cols="12"
           sm="12"
@@ -223,6 +223,19 @@ export default {
   created() {
     this.GetMapInfo();
   },
+computed: {
+        sortMapList() {
+            return this.MapList
+                .filter(mapInfo => mapInfo.map_display_name.toLowerCase().match(this.search.toLowerCase()))
+                .sort((a, b) => {
+                    if (a.map_display_name < b.map_display_name)
+                        return -1;
+                    if (a.map_display_name > b.map_display_name)
+                        return 1;
+                    return 0;
+            });
+        },
+    },
   methods: {
     async GetMapInfo() {
       try {
