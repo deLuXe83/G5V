@@ -3,7 +3,7 @@
     <v-item-group v-model="Selected" multiple>
       <v-row>
         <v-col
-          v-for="mapInfo in MapList"
+          v-for="mapInfo in MapList.sort((a, b) => (a.map_display_name > b.map_display_name) ? 1 : -1)"
           :key="mapInfo.id"
           cols="12"
           sm="12"
