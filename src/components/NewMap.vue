@@ -224,17 +224,12 @@ export default {
     this.GetMapInfo();
   },
 computed: {
-        sortMapList() {
-            return this.MapList
-                .sort((a, b) => {
-                    if (a.map_display_name < b.map_display_name)
-                        return -1;
-                    if (a.map_display_name > b.map_display_name)
-                        return 1;
-                    return 0;
-            });
-        },
-    },
+          sortMapList(){
+              return this.MapList ? _.sortBy(this.MapList, "map_display_name") : [];
+          }
+      },
+       
+  
   methods: {
     async GetMapInfo() {
       try {
