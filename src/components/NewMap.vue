@@ -3,7 +3,7 @@
     <v-item-group v-model="Selected" multiple>
       <v-row>
         <v-col
-          v-for="mapInfo in MapList.sort((a,b) => a.map_display_name - b.map_display_name )"
+          v-for="mapInfo in sortMapList"
           :key="mapInfo.id"
           cols="12"
           sm="12"
@@ -223,7 +223,13 @@ export default {
   created() {
     this.GetMapInfo();
   },
-
+  
+computed: {
+          sortMapList(){
+              return this.MapList.sort((a,b) => a.map_display_name - b.map_display_name );
+          }
+      },
+       
   
   methods: {
     async GetMapInfo() {
