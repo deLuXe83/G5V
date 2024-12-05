@@ -226,7 +226,6 @@ export default {
 computed: {
         sortMapList() {
             return this.MapList
-                .filter(mapInfo => mapInfo.map_display_name.toLowerCase().match(this.search.toLowerCase()))
                 .sort((a, b) => {
                     if (a.map_display_name < b.map_display_name)
                         return -1;
