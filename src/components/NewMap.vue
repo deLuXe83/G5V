@@ -225,11 +225,18 @@ export default {
   },
   
 computed: {
-          sortMapList(){
-              return this.MapList.sort((a,b) => a.map_display_name - b.map_display_name );
-          }
-      },
-       
+  sortMapList: function() {
+    function compare(a, b) {
+      if (a.map_display_name < b.map_display_name)
+        return -1;
+      if (a.map_display_name > b.map_display_name)
+        return 1;
+      return 0;
+    }
+
+    return this.arrays.sort(compare);
+  }
+},
   
   methods: {
     async GetMapInfo() {
