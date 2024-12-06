@@ -351,7 +351,7 @@ export default {
             singleMapStat.end_time == null
               ? null
               : "Map End: " + new Date(singleMapStat.end_time).toLocaleString();
-          this.arrMapString[index].map = "Map: " + singleMapStat.map_name;
+          this.arrMapString[index].map = "Map: " + singleMapStat.map_display_name + " (" + singleMapStat.map_name + ")";
           this.arrMapString[index].demo = singleMapStat.demoFile;
         });
       } catch (error) {
