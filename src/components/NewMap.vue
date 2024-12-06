@@ -8,7 +8,7 @@
           cols="12"
           sm="12"
           md="12"
-          lg="3"
+          lg="2"
         >
           <div class="justify-space-between">
             <v-card dense elevation="3" min-height="">
