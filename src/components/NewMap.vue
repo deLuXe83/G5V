@@ -234,7 +234,7 @@ computed: {
       return 0;
     }
 
-    return this.arrays.sort(compare);
+    return this.MapList.sort(compare);
   }
 },
   
