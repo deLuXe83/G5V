@@ -143,7 +143,7 @@
               </strong>
             </div>
             <v-row class="justify-center">
-              <v-col lg="1" sm="12" v-for="maps in MapList" :key="maps.id">
+              <v-col lg="1" sm="12" v-for="maps in sortMapList" :key="maps.id">
                 <v-checkbox
                   v-model="newMatchData.map_pool"
                   :value="maps.map_name"
@@ -416,7 +416,18 @@ export default {
         default:
           return this.$t("CreateMatch.FormError");
       }
+    },
+    sortMapList: function() {
+    function compare(a, b) {
+      if (a.map_display_name < b.map_display_name)
+        return -1;
+      if (a.map_display_name > b.map_display_name)
+        return 1;
+      return 0;
     }
+
+    return this.MapList.slice().sort(compare);
+  }
   },
   watch: {
     selectedSeason(val) {
