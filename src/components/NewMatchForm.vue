@@ -223,6 +223,9 @@
               </v-col>
             </v-row>
             <v-divider />
+             <v-col cols="12" class="text-center text-h6">
+              Veto/Map Sides
+            </v-col>
             <v-row class="justify-center">
               <v-col cols="2">
                 <v-switch
@@ -302,6 +305,9 @@
             <v-col cols="12" class="text-center text-h6">
               <strong>{{ $t("CreateMatch.ConvarTitle") }}</strong>
             </v-col>
+                        <v-col cols="12" class="text-center text-h6">
+              CVARs
+                        </v-col>
             <v-row class="justify-center">
               <v-col cols="12">
                 <v-combobox
