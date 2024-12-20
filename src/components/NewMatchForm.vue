@@ -386,7 +386,7 @@ export default {
       min_spectators_to_ready: 0,
       players_per_team: 5,
       maps_to_win: 1,
-      skip_veto: false,
+      skip_veto: true,
       map_pool: [],
       cvars: [],
       veto_first: "team1",
