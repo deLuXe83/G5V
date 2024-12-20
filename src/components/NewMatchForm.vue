@@ -236,16 +236,6 @@
               </v-col>
             </v-row>
 
-       <v-row class="justify-center">
-          <v-radio-group  v-model="newMatchData.veto_mode" row :label="Veto Options:">
-                <v-col lg="3" sm="12">
-                  <v-radio :label="Ban Ban Pick Pick (Standard)" :value="" />
-                </v-col>
-                <v-col lg="3" sm="12">
-                  <v-radio :label="Ban Ban Ban Ban Pick Pick" :value="'"team1_ban", "team2_ban", "team1_ban", "team2_ban", "team1_pick", "team2_pick"'" />
-                </v-col>
-               </v-radio-group>
-            </v-row>
 
 
             
