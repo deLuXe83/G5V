@@ -237,7 +237,7 @@
             </v-row>
 
        <v-row class="justify-center">
-          <v-radio-group row :label="Veto Options:">
+          <v-radio-group  v-model="newMatchData.veto_mode" row :label="Veto Options:">
                 <v-col lg="3" sm="12">
                   <v-radio :label="Ban Ban Pick Pick (Standard)" :value="" />
                 </v-col>
@@ -413,6 +413,7 @@ export default {
       spectators: [],
       side_type: "standard",
       map_sides: [],
+      veto_mode: [],
       wingman: false,
       clinch_series: false
     },
