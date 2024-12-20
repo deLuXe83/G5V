@@ -490,7 +490,7 @@ export default {
         cvars: []
       },
       seasonDefaults: {
-        min_players_to_ready: 5,
+        min_players_to_ready: 0,
         min_spectators_to_ready: 0,
         players_per_team: 5,
         maps_to_win: 1,
@@ -540,7 +540,7 @@ export default {
             cvars: []
           };
           this.seasonDefaults = {
-            min_players_to_ready: 5,
+            min_players_to_ready: 0,
             min_spectators_to_ready: 0,
             players_per_team: 5,
             maps_to_win: 1,
