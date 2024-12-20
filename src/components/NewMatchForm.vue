@@ -235,6 +235,21 @@
                 />
               </v-col>
             </v-row>
+
+       <v-row class="justify-center">
+         Veto Options:
+          <v-radio-group row>
+                <v-col lg="3" sm="12">
+                  <v-radio :label="Ban Ban Pick Pick" :value="1" />
+                </v-col>
+                <v-col lg="3" sm="12">
+                  <v-radio :label="Ban Ban Ban Ban Pick Pick" :value="2" />
+                </v-col>
+               </v-radio-group>
+            </v-row>
+
+
+            
             <v-row class="justify-center" v-if="newMatchData.skip_veto">
               <v-col
                 lg="3"
