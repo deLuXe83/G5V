@@ -288,7 +288,7 @@
                     <v-slider
                       v-model="seasonDefaults.min_players_to_ready"
                       single-line
-                      :min="1"
+                      :min="0"
                       :max="7"
                       :thumb-size="24"
                       thumb-label
@@ -302,7 +302,8 @@
                     <v-slider
                       v-model="seasonDefaults.min_spectators_to_ready"
                       single-line
-                      :min="0"
+                     :min="0"
+                      :max="10"
                       :thumb-size="24"
                       thumb-label
                       ticks="always"
@@ -325,7 +326,7 @@
                   </strong>
                 </v-col>
                 <v-row no-gutters class="justify-center">
-                  <v-col lg="1" sm="12" v-for="maps in MapList" :key="maps.id">
+                  <v-col lg="1" sm="12" v-for="maps in sortMapList" :key="maps.id">
                     <v-checkbox
                       v-model="seasonDefaults.map_pool"
                       :value="maps.map_name"
@@ -493,7 +494,7 @@ export default {
         min_spectators_to_ready: 0,
         players_per_team: 5,
         maps_to_win: 1,
-        skip_veto: false,
+        skip_veto: true,
         map_pool: [],
         spectators: [],
         side_type: "standard",
@@ -543,7 +544,7 @@ export default {
             min_spectators_to_ready: 0,
             players_per_team: 5,
             maps_to_win: 1,
-            skip_veto: false,
+            skip_veto: true,
             map_pool: [],
             spectators: [],
             side_type: "standard",
@@ -703,7 +704,7 @@ export default {
             min_spectators_to_ready: 0,
             players_per_team: 5,
             maps_to_win: 1,
-            skip_veto: false,
+            skip_veto: true,
             map_pool: [],
             spectators: [],
             side_type: "standard",
@@ -790,6 +791,19 @@ export default {
     dateRangeText() {
       return this.newSeason.dates.join(" ~ ");
     },
+
+     sortMapList: function() {
+    function compare(a, b) {
+      if (a.map_display_name < b.map_display_name)
+        return -1;
+      if (a.map_display_name > b.map_display_name)
+        return 1;
+      return 0;
+    }
+
+    return this.MapList.slice().sort(compare);
+  },
+    
     headers() {
       return [
         {
