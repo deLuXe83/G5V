@@ -611,7 +611,8 @@ export default {
             min_spectators_to_ready: parseInt(
               this.newMatchData.min_spectators_to_ready
             ),
-            map_sides: this.newMatchData.map_sides.join(",")
+            map_sides: this.newMatchData.map_sides.join(","),
+            veto_mode: ["team1_ban","team2_ban","team1_ban","team2_ban","team1_pick","team2_pick"]
           }
         ];
         try {
