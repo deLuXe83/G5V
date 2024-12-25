@@ -601,7 +601,7 @@ export default {
             match_cvars: newCvar,
             veto_first: this.newMatchData.veto_first,
             //skip_veto: this.newMatchData.skip_veto,
-            skip_veto: testveto,
+            skip_veto: "testveto",
             wingman: this.newMatchData.wingman,
             clinch_series: this.newMatchData.clinch_series,
             spectator_auths: this.newMatchData.spectators,
@@ -614,7 +614,7 @@ export default {
             ),
             map_sides: this.newMatchData.map_sides.join(","),
             // veto Mode hart eincodieren:
-            veto_mode: ["team1_ban","team2_ban","team1_ban","team2_ban","team1_pick","team2_pick"]
+            veto_mode: "["team1_ban","team2_ban","team1_ban","team2_ban","team1_pick","team2_pick"]"
           }
         ];
         try {
