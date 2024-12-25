@@ -613,7 +613,7 @@ export default {
             ),
             map_sides: this.newMatchData.map_sides.join(","),
             // veto Mode hart eincodieren:
-            veto_mode: ["team1_ban","team2_ban","team1_ban","team2_ban","team1_pick","team2_pick"]
+            // veto_mode: ["team1_ban","team2_ban","team1_ban","team2_ban","team1_pick","team2_pick"]
           }
         ];
         try {
